@@ -8,7 +8,7 @@ init python:
 # Например, сцену bg room можно вызвать файлом "bg room.png",
 # а eileen happy — "eileen happy.webp", и тогда они появятся в игре.
 
-# Игра начинается здесь:
+# Начало игры
 label start:
     scene room_evening with open_eyes
 
@@ -32,8 +32,6 @@ label start:
 
     Mind "Уже 19:40. Я ничего не понимаю, но мне пора к друзьям на встречу."
 
-
-label inroduction:
     scene black with fade
 
     FullScreen 'На просторах интернета давно не было занимательных историй, которые смогли бы заинтересовать искушенного читателя.'
@@ -41,8 +39,6 @@ label inroduction:
     FullScreen 'Для начала увлекательного приключения нужно выбрать персонажа, глазами которого мы расскажем о том, что произошло в городе Н.'
 
     nvl clear
-
-    jump person_menu
 
 
 label person_menu:
@@ -59,7 +55,7 @@ label person_menu:
 
             menu:
                 "Выбрать историю Вовы": 
-                    jump choose_vova
+                    jump scene_2
                 "Назад": 
                     jump person_menu
         "Игорь":
@@ -71,7 +67,7 @@ label person_menu:
 
             menu:
                 "Выбрать историю Игоря": 
-                    jump club
+                    jump scene_4
                 "Назад": 
                     jump person_menu
         "Маша":
@@ -84,12 +80,74 @@ label person_menu:
 
             menu:
                 "Выбрать историю Маши": 
-                    jump choose_masha
+                    jump scene_3
                 "Назад": 
                     jump person_menu
 
+# Выбор Вовы
+label scene_2:
+    scene office_evening with fade
 
-label club:
+    Mind "Боже, как я устал…{w} Еще 10 минут, и я оторвусь по полной."
+
+    show Boss at right with dissolve
+
+    Boss "Владимир!{w} Ты сделал за сегодня все отчёты?"
+
+    Mind "Какой же он ублюдок!{w} Каждый день видеть его лицо, да лучше бы я остался у себя в городе и работал всю жизнь на заводе!"
+
+    show Vova at left with dissolve
+
+    Vova "Да, я все сделал."
+
+    hide Boss
+    show Boss happy
+    Boss "Ха-ха-ха,"
+    Boss "ну вот и отлично, вижу ты хорошо выполняешь свою работу, еще немного и получишь премию."
+    hide Boss
+
+    Mind "Не дождёшься урод, с сегодняшнего дня я начинаю стартап умных чехлов!{w} Вы все увидите мою мощь!"
+    Mind "Только… {w}где найти деньги?"
+    hide Vova
+
+    jump scene_4
+
+# Выбор Маши
+label scene_3:
+    scene black
+
+    Narrator "Маша сидит и ждёт результата врачей. Напряженность в воздухе означает что-то неладное."
+
+    scene hospital with fade
+
+    show Masha at left with dissolve
+
+    Masha "С ней всё будет хорошо?"
+
+    show Doctor at right with dissolve
+
+    Doctor "Да…"
+    Doctor "С ней все будет хорошо, не беспокойтесь…"
+    Doctor "Но, есть один нюанс..."
+    Doctor "Эта операция будет стоить вам миллион, вы готовы ее оплатить?"
+
+    Masha "Что?"
+    Masha "А как же обещанные государством деньги?"
+
+    Doctor "Послушайте... {w} у нас очень большая очередь."
+    Doctor "Вы понемногу продвигаетесь, но скорее всего мы можем не успеть…"
+
+    hide Doctor
+    hide Masha
+
+    Mind "Почему у меня нет денег?.. Я могла бы работать в большом городе и дать все своей матери."
+    Mind "А теперь…"
+    Mind "теперь я работаю уборщицей на этом гребанном заводе."
+
+    jump scene_4
+
+# Клуб
+label scene_4:
     scene club with fade
 
     show Masha at left with dissolve
