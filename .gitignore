@@ -1,5 +1,7 @@
 .idea
+
 *.txt
+*.rpyc
 
 game/saves
 game/cache
