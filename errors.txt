@@ -1,0 +1,11 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 3: positional argument follows keyword argument
+    open_eyes = ImageDissolve(eye, 2.0, 20, reverse=False, scale)
+                                                                 ^
+    
+
+Ren'Py Version: Ren'Py 8.0.3.22090602
+Thu Sep  8 16:46:27 2022
