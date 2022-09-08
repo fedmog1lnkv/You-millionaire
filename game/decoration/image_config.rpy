@@ -13,17 +13,17 @@ transform left:
 transform right:
     xalign 0.85
 
-image Vova norm = "Vova_Norm.png"
-image Vova norm reverse = "Vova_Norm_R.png"
+image Vova norm = "characters/Vova/Vova_Norm.png"
+image Vova norm reverse = "characters/Vova/Vova_Norm_R.png"
 
-image Igor norm = "Igor_Norm.png"
-image Igor norm reverse = "Igor_Norm_R.png"
+image Igor norm = "characters/Igor/Igor_Norm.png"
+image Igor norm reverse = "characters/Igor/Igor_Norm_R.png"
 
-image Masha norm = "Masha_Norm.png"
-image Masha norm reverse = "Masha_Norm_R.png"
-image Masha cryed = "Masha_Cryed.png"
+image Masha norm = "characters/Masha/Masha_Norm.png"
+image Masha norm reverse = "characters/Masha/Masha_Norm_R.png"
+image Masha cryed = "characters/Masha/Masha_Cryed.png"
 
-image Boss norm = "Boss_Norm.png"
-image Boss happy = "Boss_Happy.png"
+image Boss norm = "characters/Boss/Boss_Norm.png"
+image Boss happy = "characters/Boss/Boss_Happy.png"
 
-image Doctor norm = "Doctor_Norm.png"
+image Doctor norm = "characters/Doctor/Doctor_Norm.png"
