@@ -13,12 +13,10 @@ label start:
 
     scene room_evening with open_eyes
 
-    show Igor
+    show Igor  with dissolve
 
     Igor "Сколько я спал?"
     Igor "Чем я занимался вчера?"
-
-    Igor "А что это под кроватью?"
 
     Narrator "Игорь находит чемодан возле кровати"
 
@@ -29,9 +27,9 @@ label start:
 
     Narrator "Игорь открыл чемодан, в нём лежала огромная сумма денег."
 
-    scene suitcase
+    scene suitcase with fade
 
-    Igor "Я еще сплю? Откуда это? Может, я украл их у кого-то? Но я всю жизнь был честным…"
+    Igor "Я еще сплю? Откуда это? У кого я мог украсть такую сумму денег? Но я всю жизнь был честным…"
 
     Mind "Уже 19:40. Я ничего не понимаю, но мне пора к друзьям на встречу."
 
@@ -39,9 +37,8 @@ label start:
 
 label choose_pers:
 
-    scene black
+    scene black with fade
 
-    show eileen happy
 
     Narrator '''На просторах интернета давно не было занимательных историй, которые смогли бы заинтересовать искушенного читателя.'''
 
@@ -53,35 +50,142 @@ label choose_pers:
     menu:
         "Выберите судьбу"
         "Вова":
-            jump choose_Vova
+            jump office_evening_2
         "Игорь":
-            jump choose_Igor
+            jump club_4
         "Маша":
-            jump choose_Masha
+            jump hospital_evening_3
+
+
+label office_evening_2:
+
+    scene office_evening with fade
+
+    Mind "Боже, как я устал…"
+    Mind "Еще 10 минут, и я оторвусь по полной."
+
+    show Boss  at right  with dissolve
+
+    Boss "Владимир, Ты сделал за сегодня все отчёты?"
+
+    Mind "Какой же он ублюдок, каждый день видеть его лицо, да лучше бы я остался у себя в городе и работал всю жизнь на заводе."
+
+    show Vova  at left with dissolve
+
+    Vova "Да, я все сделал."
+
+    hide Boss
+    show Boss happy
+    Boss "Ха-ха-ха,"
+    Boss "ну вот и отлично, вижу ты хорошо выполняешь свою работу, еще немного и получишь премию."
+    hide Boss
+
+    Mind "Не дождёшься урод, с сегодняшнего дня я начинаю стартап умных чехлов, вы все увидите мою мощь."
+    Mind "Только… где найти деньги?"
+    hide Vova
+
     return
 
-label choose_Vova:
+label hospital_evening_3:
 
-    scene bg black
+    scene black
 
-    Narrator "вы выбрали Вову"
+    Narrator "Маша сидит и ждёт результата врачей. Напряженность в воздухе означает что-то неладное."
 
-label choose_Igor:
+    scene hospital with fade
 
-    scene bg black
+    show Masha  at left with dissolve
 
-    Narrator "вы выбрали Игоря"
+    Masha "С ней всё будет хорошо?"
 
-label choose_Masha:
+    show Doctor  at right with dissolve
 
-    scene bg black
+    Doctor "Да…"
+    Doctor "С ней все будет хорошо не беспокойтесь…"
+    Doctor "Но, есть один нюанс..."
+    Doctor "Эта операция будет стоить вам миллион, вы готовы ее оплатить?"
 
-    Narrator "вы выбрали Машу"
+    Masha "Что?"
+    Masha "А как же обещанные государством деньги?"
 
+    Doctor "Послушайте, у нас очень большая очередь."
+    Doctor "Вы понемногу продвигаетесь, но скорее всего мы уже не успеем…"
 
+    hide Doctor
+    hide Masha
 
-label club:
-    scene bg black
+    Mind "Почему у меня нет много денег? Я могла работать в большом городе и дать все своей матери."
+    Mind "А теперь…"
+    Mind "теперь я работаю уборщицей на этом гребанном заводе."
 
-    show eileen
+    return
 
+label club_4:
+
+    scene club with fade
+
+    show Masha at left with dissolve
+    Masha "Ну что как прошли ваши будние дни?"
+
+    show Vova  reverse at right with dissolve
+    Vova "Да как всегда, босс орёт, сижу и делаю эти долбанные отчёты…"
+    Vova "Решил да ну его, начну делать стартап."
+    Vova "Мы же всегда хотели это сделать братан, помнишь как мы хотели покорять вершины и быть супер богатыми."
+
+    hide Masha
+
+    show Igor at left with dissolve
+    Igor "Да…"
+    Igor "Это было лучшее время…"
+
+    Vova "Но мы можем это сделать сейчас!"
+    Vova "Нам только нужны деньги"
+    Vova "Эти чертовы деньги, которых никогда обычно нет. Вот проснуться бы с миллионом и мы бы получили всего что хотели!"
+
+    Igor "Да…"
+
+    hide Vova
+
+    show Masha reverse at right with dissolve
+
+    Masha "Эх… Я бы тоже хотела миллион."
+    Masha "Моя мама лежит сейчас в больнице, одна. Я не знаю что мне делать."
+    show Masha cryed reverse at right with dissolve
+    Masha "Я боюсь я ее не вылечу…"
+
+    Igor "Эй…"
+    Igor "Я думаю с ней все будет хорошо…"
+
+    Masha "Я не знаю!"
+    Masha "Ей нужны деньги на операцию, а у меня…"
+    Masha "у меня…"
+
+    hide Igor
+
+    show Vova at left with dissolve
+    Vova "Ну успокойся, что ты так реагируешь"
+
+    hide Masha
+
+    show Igor at right with dissolve
+    Igor "У нее действительно проблема."
+
+    Vova "Не знаю, как у нее, а у меня точно проблемы"
+
+    hide Vova
+
+    show Masha at left with dissolve
+    Masha "Ну что мы все о себе."
+    Masha "Игорь, как у тебя дела с девушкой?"
+
+    Igor "Никак, она меня динамит."
+    Igor "Она сказала, что я нищеброд и работаю в маке."
+    Igor "Но я думаю завтра она возьмёт свои слова обратно!"
+
+    hide Masha
+
+    show Vova at left with dissolve
+    Vova "О чём ты?"
+
+    hide Igor
+    hide Vova
