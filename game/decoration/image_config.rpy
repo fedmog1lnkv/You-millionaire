@@ -3,6 +3,8 @@ image office_evening = im.Scale("office_evening.png", 1920, 1080)
 image hospital = im.Scale("hospital.png", 1920, 1080)
 image club = im.Scale("club.png", 1920, 1080)
 image entry_club = im.Scale("entry.png", 1920, 1080)
+image choose_person = im.Scale("choose_person.png", 1920, 1080)
+
 
 transform left:
     xalign 0.15

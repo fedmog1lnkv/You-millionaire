@@ -10,10 +10,9 @@ init python:
 
 # Игра начинается здесь:
 label start:
-
     scene room_evening with open_eyes
 
-    show Igor  with dissolve
+    show Igor with dissolve
 
     Igor "Сколько я спал?"
     Igor "Чем я занимался вчера?"
@@ -47,6 +46,8 @@ label inroduction:
 
 
 label person_menu:
+    scene choose_person with fade
+
     menu:
         "Выберите судьбу"
         "Вова":
@@ -102,12 +103,11 @@ label club:
     hide Masha
 
     show Igor at left with dissolve
-    Igor "Да…"
-    Igor "Это было лучшее время…"
+    Igor "Да…{w} Это было лучшее время…"
 
     Vova "Но мы можем это сделать сейчас!"
-    Vova "Нам только нужны деньги"
-    Vova "Эти чертовы деньги, которых никогда обычно нет. Вот проснуться бы с миллионом и мы бы получили всего что хотели!"
+    Vova "Только нам нужны деньги..."
+    Vova "Эти чертовы деньги, которых никогда обычно нет! Вот проснуться бы с миллионом под подушкой!"
 
     Igor "Да…"
 
@@ -115,39 +115,37 @@ label club:
 
     show Masha reverse at right with dissolve
 
-    Masha "Эх… Я бы тоже хотела миллион."
+    Masha "Эх…{w} Я бы тоже хотела миллион."
     Masha "Моя мама лежит сейчас в больнице, одна. Я не знаю что мне делать."
     show Masha cryed reverse at right with dissolve
     Masha "Я боюсь я ее не вылечу…"
 
-    Igor "Эй…"
-    Igor "Я думаю с ней все будет хорошо…"
+    Igor "Эй…{w} Я надеюсь, с ней все будет хорошо…"
 
     Masha "Я не знаю!"
-    Masha "Ей нужны деньги на операцию, а у меня…"
-    Masha "у меня…"
+    Masha "Ей нужны деньги на операцию, а у меня…{w} у меня…"
 
     hide Igor
 
     show Vova at left with dissolve
-    Vova "Ну успокойся, что ты так реагируешь"
+    Vova "Ну успокойся, что ты так реагируешь?!"
 
     hide Masha
 
     show Igor at right with dissolve
     Igor "У нее действительно проблема."
 
-    Vova "Не знаю, как у нее, а у меня точно проблемы"
+    Vova "Не знаю, как у нее, а у меня точно проблемы!"
 
     hide Vova
 
     show Masha at left with dissolve
-    Masha "Ну что мы все о себе."
+    Masha "Ну что мы все о себе да о себе?!"
     Masha "Игорь, как у тебя дела с девушкой?"
 
-    Igor "Никак, она меня динамит."
+    Igor "Никак...{w} она меня динамит."
     Igor "Она сказала, что я нищеброд и работаю в маке."
-    Igor "Но я думаю завтра она возьмёт свои слова обратно!"
+    Igor "Но, я думаю, завтра она возьмёт свои слова обратно!"
 
     hide Masha
 
