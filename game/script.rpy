@@ -212,3 +212,7 @@ label scene_4:
 
     hide Igor
     hide Vova
+
+
+label scene_14
+    scene club with fade
