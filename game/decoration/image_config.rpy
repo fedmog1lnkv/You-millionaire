@@ -1,3 +1,4 @@
+# Фоновые изображения
 image room_evening = im.Scale("room_evening.png", 1920, 1080)
 image room_day = im.Scale("room_day.png", 1920, 1080)
 #image suitcase = im.Scale("suitcase.png", 1920, 1080)#изменить!!!!!!!!!!!!!!!
@@ -9,6 +10,7 @@ image entry_club = im.Scale("entry.png", 1920, 1080)
 image choose_person = im.Scale("choose_person.png", 1920, 1080)
 
 
+# Персонажи
 transform left:
     xalign 0.15
 

@@ -10,5 +10,5 @@ define Girlfriend = Character("Девушка", color="#efefef")
 
 # Рассказчики
 define FullScreen = Character(None, kind=nvl)
-define Narrator = Character("Рассказчик", color="#d2dae2", what_italic = True)
-define Mind = Character("...", color="#FFFFFF", what_italic = True)
+define Narrator = Character(None, color="#d2dae2", what_italic=True)
+define Mind = Character("...", color="#FFFFFF", what_italic=True)
