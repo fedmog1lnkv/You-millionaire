@@ -1,4 +1,6 @@
 image room_evening = im.Scale("room_evening.png", 1920, 1080)
+image room_day = im.Scale("room_day.png", 1920, 1080)
+#image suitcase = im.Scale("suitcase.png", 1920, 1080)#изменить!!!!!!!!!!!!!!!
 image restaurant = im.Scale("restaurant.png", 1920, 1080)
 image office_evening = im.Scale("office_evening.png", 1920, 1080)
 image hospital = im.Scale("hospital.png", 1920, 1080)

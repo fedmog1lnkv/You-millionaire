@@ -1,12 +1,12 @@
 ﻿init python:
     open_eyes = ImageDissolve("eye.png", 2.0, 20, reverse=False)
-    closw_eyes = ImageDissolve("eye.png", 2.0, 20, reverse=True)
+    close_eyes = ImageDissolve("eye.png", 2.0, 20, reverse=True)
 
 # Начало игры
 label start:
-    scene room_evening with open_eyes
+    scene room_day with open_eyes
 
-    show Igor with dissolve
+    show Igor norm with dissolve
 
     Igor "Сколько я спал?"
     Igor "Чем я занимался вчера?"
@@ -20,9 +20,9 @@ label start:
 
     Narrator "Игорь открыл чемодан, в нём лежала огромная сумма денег."
 
-    scene suitcase with fade
+    scene room_day with fade
 
-    Igor "Я еще сплю? Откуда это? У кого я мог украсть такую сумму денег? Но я всю жизнь был честным…"
+    Mind "Я еще сплю?{w} Откуда это?{w} У кого я мог украсть такую сумму денег? Но я всю жизнь был честным…"
 
     Mind "Уже 19:40. Я ничего не понимаю, но мне пора к друзьям на встречу."
 
@@ -67,8 +67,7 @@ label person_menu:
         "Маша":
             FullScreen "Молодая девушка, всерьез увлекающаяся живописью, мечтающая найти себя."
             FullScreen "Живопись она полюбила с детства. И вообще, она чем-то до сих пор похожа на ребенка: наивная, эмоциональная и очень открытая, она часто пленяла своим характером окружающих."
-            FullScreen "Маша очень много времени провела в своем родном городе, потому что была очень привязана к матери,"
-            FullScreen "но сейчас, ситуация вынудила ее приехать в город Н для того, чтобы заработать денег."
+            FullScreen "Маша очень много времени провела в своем родном городе, потому что была очень привязана к матери."
 
             nvl clear
 
@@ -84,18 +83,18 @@ label scene_2:
 
     Mind "Боже, как я устал…{w} Еще 10 минут, и я оторвусь по полной."
 
-    show Boss at right with dissolve
+    show Boss norm at right with dissolve
 
     Boss "Владимир!{w} Ты сделал за сегодня все отчёты?"
 
     Mind "Какой же он ублюдок!{w} Каждый день видеть его лицо, да лучше бы я остался у себя в городе и работал всю жизнь на заводе!"
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
 
     Vova "Да, я все сделал."
 
     hide Boss
-    show Boss happy
+    show Boss happy at right with dissolve
     Boss "Ха-ха-ха,"
     Boss "ну вот и отлично, вижу ты хорошо выполняешь свою работу, еще немного и получишь премию."
     hide Boss
@@ -104,7 +103,7 @@ label scene_2:
     Mind "Только… {w}где найти деньги?"
     hide Vova
 
-    jump scene_4
+    jump scene_5
 
 # Выбор Маши
 label scene_3:
@@ -114,11 +113,11 @@ label scene_3:
 
     scene hospital with fade
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
 
     Masha "С ней всё будет хорошо?"
 
-    show Doctor at right with dissolve
+    show Doctor norm at right with dissolve
 
     Doctor "Да…"
     Doctor "С ней все будет хорошо, не беспокойтесь…"
@@ -138,23 +137,23 @@ label scene_3:
     Mind "А теперь…"
     Mind "теперь я работаю уборщицей на этом гребанном заводе."
 
-    jump scene_4
+    jump scene_6
 
 # Клуб
 label scene_4:
     scene club with fade
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
     Masha "Ну что как прошли ваши будние дни?"
 
-    show Vova  reverse at right with dissolve
+    show Vova norm reverse at right with dissolve
     Vova "Да как всегда, босс орёт, сижу и делаю эти долбанные отчёты…"
     Vova "Решил да ну его, начну делать стартап."
     Vova "Мы же всегда хотели это сделать братан, помнишь как мы хотели покорять вершины и быть супер богатыми."
 
     hide Masha
 
-    show Igor at left with dissolve
+    show Igor norm at left with dissolve
     Igor "Да…{w} Это было лучшее время…"
 
     Vova "Но мы можем это сделать сейчас!"
@@ -165,7 +164,7 @@ label scene_4:
 
     hide Vova
 
-    show Masha reverse at right with dissolve
+    show Masha norm reverse at right with dissolve
 
     Masha "Эх…{w} Я бы тоже хотела миллион."
     Masha "Моя мама лежит сейчас в больнице, одна. Я не знаю что мне делать."
@@ -179,19 +178,19 @@ label scene_4:
 
     hide Igor
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
     Vova "Ну успокойся, что ты так реагируешь?!"
 
     hide Masha
 
-    show Igor at right with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "У нее действительно проблема."
 
     Vova "Не знаю, как у нее, а у меня точно проблемы!"
 
     hide Vova
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
     Masha "Ну что мы все о себе да о себе?!"
     Masha "Игорь, как у тебя дела с девушкой?"
 
@@ -201,7 +200,7 @@ label scene_4:
 
     hide Masha
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
     Vova "О чём ты?"
 
     hide Igor
@@ -214,20 +213,20 @@ label scene_4:
 
             scene entry_club with fade
 
-            show Vova at left with dissolve
+            show Vova norm at left with dissolve
             Vova "Тебе в какую сторону?"
 
-            show Igor at right with dissolve
+            show Igor norm reverse at right with dissolve
             Igor "На метро."
 
             hide Igor
 
-            show Masha at right with dissolve
+            show Masha norm reverse at right with dissolve
             Masha "Пока..."
 
             hide Masha
 
-            show Igor at right with dissolve
+            show Igor norm reverse at right with dissolve
             Igor "Знаешь, я тут подумал над твоим проектом…"
             Igor "Мне есть что тебе рассказать!"
 
@@ -236,10 +235,12 @@ label scene_4:
         "Игорь":
             Igor "Выйдем на улицу, что-то мне не хорошо…"
 
-            show Vova at right with dissolve
+            scene entry_club with fade
+
+            show Vova norm reverse at right with dissolve
             Vova "Тебе в какую сторону?"
 
-            show Igor at left with dissolve
+            show Igor norm at left with dissolve
             Igor "Я хочу прогуляться."
             Igor "Пока ребята."
 
@@ -247,7 +248,7 @@ label scene_4:
 
             hide Vova
 
-            show Masha at right with dissolve
+            show Masha norm reverse at right with dissolve
             Masha "Пока…"
 
             hide Masha
@@ -255,48 +256,48 @@ label scene_4:
 
             Igor "Я не знаю правилен мой выбор… Но в любом случае я его уже принял."
 
-            jump scene_10
+            jump scene_11
 
         "Маша":
             Igor "Выйдем на улицу, что-то мне не хорошо…"
 
             scene entry_club with fade
 
-            show Masha at right with dissolve
+            show Masha norm reverse at right with dissolve
             Masha "Тебе в какую сторону?"
 
-            show Igor at left with dissolve
+            show Igor norm at left with dissolve
             Igor "Думаю таксу заказать."
             Masha "Я поеду с тобой, нам по пути."
             Masha "Пока, Вова"
 
             hide Igor
 
-            show Vova at left with dissolve
+            show Vova norm at left with dissolve
             Vova "Пока…"
 
             hide Vova
 
-            show Igor at left with dissolve
+            show Igor norm at left with dissolve
             Igor "Мне действительно жаль твою маму, и я хочу тебе помочь…"
 
-            jump scene_11
+            jump scene_10
 
 
 label scene_5:
     scene club with fade
 
-    show Masha at right with dissolve
+    show Masha norm reverse at right with dissolve
     Masha "Ну что, как прошли ваши трудовые будни?"
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
     Vova "Этот босс действует мне на нервы, но скоро это буду делать я…"
     Vova "Решил да ну его, начну делать стартап."
     Vova "Мы же всегда хотели это сделать братан, помнишь как мы хотели покорять вершины и быть супер богатыми."
 
     hide Masha
 
-    show Igor at right with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "Да…{w} это именно то что мне нужно!"
 
     Vova "Но мы можем это сделать сейчас!"
@@ -306,7 +307,7 @@ label scene_5:
 
     hide Vova
 
-    show Igor at left with dissolve
+    show Masha norm at left with dissolve
 
     Masha "Эх…{w} Я бы тоже хотела миллион. Моя мама лежит сейчас в больнице, одна."
     Masha "И...{w} Я не знаю, что мне делать. Мне нужны деньги."
@@ -317,7 +318,7 @@ label scene_5:
 
     hide Igor
 
-    show Vova at left with dissolve
+    show Vova norm reverse at right with dissolve
     Vova "Да сдай ты ее уже куда-нибудь, мне эти деньги для бизнеса, а тебе для какой-то чепухи."
     Igor "..."
     Vova "Не знаю, как у нее, а у очень важные планы."
@@ -326,14 +327,14 @@ label scene_5:
 
     hide Vova
 
-    show Igor at left with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "Никак, она меня динамит."
     Igor "Она сказала, что я нищеброд и работаю в маке."
     Igor "Но я думаю завтра она возьмёт свои слова обратно."
 
     hide Masha
 
-    show Vova at right with dissolve
+    show Vova norm at left with dissolve
     Vova "О чём ты?"
     Masha "…"
 
@@ -342,21 +343,21 @@ label scene_5:
 
     scene entry_club with fade
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
     Vova "Тебе в какую сторону?"
 
-    show Igor at right with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "На метро"
     Vova "Мне туда же, пока Маша"
 
     hide Igor
 
-    show Masha at right with dissolve
+    show Masha norm reverse at right with dissolve
     Masha "Пока…"
 
     hide Masha
 
-    show Igor at right with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "Знаешь, я тут подумал над твоим проектом…{w} Мне есть что тебе рассказать!"
     Igor "У меня есть миллион..."
     Vova "Что?{w} Откуда?"
@@ -381,20 +382,20 @@ label scene_5:
 label scene_6:
     scene club with fade
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
     Masha "Ну что, парни, как ваши дела? Произошло что-нибудь новенькое?"
 
-    show Vova at right with dissolve
+    show Vova norm reverse at right with dissolve
     Vova "Никак все так же тускло."
     Vova "Подумываю над стартапом{w}, но не знаю даже с чего начать."
 
     hide Vova
 
-    show Igor at right with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "Эх…"
     Masha "Эх…{w} Я бы тоже хотела миллион."
     Masha "Моя мама лежит сейчас в больнице, одна. Я не знаю что мне делать."
-    show Masha cryed reverse at left with dissolve
+    show Masha cryed at left with dissolve
     Masha "Я боюсь я ее не вылечу…"
     Igor "Эй…\nЯ думаю с ней все будет хорошо…"
     Masha "Я не знаю!"
@@ -403,14 +404,14 @@ label scene_6:
 
     hide Masha
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
     Vova "Мне очень жаль..."
     Igor "У нее действительно проблема."
     Vova "Что бы могло произойти, что бы ей стало лучше."
 
     hide Vova
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
     Masha "Я не знаю, мне очень плохо в последние дни, но думаю я как-нибудь справлюсь."
     Masha "Игорь, как у тебя дела с девушкой?"
     Igor "Никак, она меня динамит."
@@ -419,7 +420,7 @@ label scene_6:
 
     hide Masha
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
     Vova "О чём ты?"
     Masha "…"
 
@@ -430,10 +431,10 @@ label scene_6:
 
     scene entry_club with fade
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
     Masha "Тебе в какую сторону?"
 
-    show Igor at right with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "Думаю таксу заказать."
 
     Masha "Я поеду с тобой, нам по пути."
@@ -441,12 +442,12 @@ label scene_6:
 
     hide Igor
 
-    show Vova at right with dissolve
+    show Vova norm reverse at right with dissolve
     Vova "Пока…"
 
     hide Vova
 
-    show Igor at right with dissolve
+    show Igor norm reverse at right with dissolve
     Igor "Мне действительно жаль твою маму, и я хочу тебе помочь…"
     Igor "И я могу пожертвовать этот миллион ей на лечение"
     Masha "Я не могу, это же…"
@@ -457,20 +458,20 @@ label scene_6:
         "Взять деньги":
             Masha "Спасибо тебе большое, ты мой герой!"
 
-            jump scene_12
+            jump scene_13
         "Отказаться":
             Masha "Я не могу это сделать, я дождусь бесплатного лечения…"
 
-            jump scene_13
+            jump scene_12
 
 
 label scene_7:
     scene office_evening with fade
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
 
     Vova "Опять он идёт сюда…{w} Что ему от меня надо?.."
 
-    show Boss reverse at right with dissolve
+    show Boss norm at right with dissolve
 
     Boss "Ну что, ватокат, как работа продвигается?"
     Vova "..."
@@ -484,17 +485,17 @@ label scene_7:
     hide Boss
     hide Vova
 
-    jump scene_14
+    jump scene_15
 
 
 label scene_8:
     scene office_evening with fade
 
-    show Vova at left with dissolve
+    show Vova norm at left with dissolve
 
     Vova "Опять он идёт сюда…{w} Что ему от меня надо?.."
 
-    show Boss reverse at right with dissolve
+    show Boss norm at right with dissolve
 
     Boss "Владимир, как идет работа?"
     Vova "..."
@@ -521,8 +522,8 @@ label scene_8:
 label scene_9:
     scene restaurant with fade
 
-    show Igor at left with dissolve
-    show Girlfriend reverse at right with dissolve
+    show Igor norm at left with dissolve
+    show Girlfriend norm at right with dissolve
 
 
     Igor "Как приятно пригласить тебя в этот вечер"
@@ -540,14 +541,14 @@ label scene_9:
 
     hide Igor
 
-    jump scene_15
+    jump scene_14
 
 
 label scene_10:
     scene restaurant with fade
 
-    show Igor at left with dissolve
-    show Girlfriend reverse at right with dissolve
+    show Igor norm at left with dissolve
+    show Girlfriend norm at right with dissolve
 
     Igor "Как приятно снова встретиться с тобой.{w} Мы так давно не виделись"
     Girlfriend "Игорь, прошу тебя!{w} Давай без этой занудной романтики.{w} Ты хотел мне что-то рассказать?"
@@ -567,15 +568,15 @@ label scene_10:
 
     hide Igor
 
-    jump scene_15
+    jump scene_16
 
 
 label scene_11:
     scene restaurant with fade
 
-    show Girlfriend reverse at right with dissolve
+    show Girlfriend norm at right with dissolve
 
-    show Igor at left with dissolve
+    show Igor norm at left with dissolve
 
     Igor "Как приятно пригласить тебя в этот вечер"
     Girlfriend "Ну давай без этой ванили, ты мне хотел что-то рассказать"
@@ -606,11 +607,11 @@ label scene_11:
 label scene_12:
     scene hospital with fade
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
 
     Masha "Доктор, я не смогла найти деньги, я беспомощна, я ненавижу себя, я…"
 
-    show Doctor reverse at right with dissolve
+    show Doctor norm at right with dissolve
 
     Doctor "Постойте, нам не нужны ваши деньги, местный фонд заинтересовался вашей матерью и оплатил полную сумму."
     Doctor "С ней все будет хорошо!"
@@ -625,17 +626,17 @@ label scene_12:
 
     hide Masha
 
-    jump scene_16
+    jump scene_15
 
 
 label scene_13:
     scene hospital with fade
 
-    show Masha at left with dissolve
+    show Masha norm at left with dissolve
 
     Masha "Доктор, как она? Я принесла деньги, вот они!"
 
-    show Doctor reverse at right with dissolve
+    show Doctor norm at right with dissolve
 
     Doctor "Постойте, нам не нужны ваши деньги, местный фонд заинтересовался вашей матерью и оплатил полную сумму."
     Doctor "С ней все будет хорошо!"
@@ -659,9 +660,9 @@ label scene_13:
 label scene_14:
     scene club with fade
 
-    show Igor at left with dissolve
-    show Masha at center with dissolve
-    show Vova at right with dissolve
+    show Igor norm at left with dissolve
+    show Masha norm at center with dissolve
+    show Vova norm at right with dissolve
 
     Igor "Вован!{w} Ну что, как там с проектом? Мы должны подняться!"
     Igor "Я был сегодня с девушкой на свидании и…"
@@ -683,9 +684,9 @@ label scene_14:
 label scene_15:
     scene club with fade
 
-    show Igor at left with dissolve
-    show Masha at center with dissolve
-    show Vova at right with dissolve
+    show Igor norm at left with dissolve
+    show Masha norm at center with dissolve
+    show Vova norm at right with dissolve
 
     Vova "Ну что, Игорь, как свидание?"
     Igor "Да никак!{w} Я ее послал к чертям она еще та *****"
@@ -704,9 +705,9 @@ label scene_15:
 label scene_16:
     scene club with fade
 
-    show Igor at left with dissolve
-    show Masha at center with dissolve
-    show Vova at right with dissolve
+    show Igor norm at left with dissolve
+    show Masha norm at center with dissolve
+    show Vova norm at right with dissolve
 
     Masha "Парни, простите меня!{w} Я взяла деньги и не подумала о вас, мне так стыдно."
     Vova "Какие деньги?"
@@ -726,11 +727,15 @@ label scene_16:
 label scene_17:
     scene room_evening with fade
 
-    show Igor at center with dissolve
+    show Igor norm with dissolve
 
     Igor "Я не знаю, что я опять сделал не так…"
     Igor "Что я опять сделал не так?!{w} А!"
     Igor "Этот чемодан опять остался со мной.{w} Напьюсь, и станет легче, надоело мучаться..."
-    Igor "И опять в моей жизни ничего не изменилось…"
+
+    hide Igor
+    scene black with close_eyes
+    Mind "И опять в моей жизни ничего не изменилось…"
+
 
     jump start
