@@ -8,7 +8,7 @@ label start:
 
     play music "<loop 0.1>sound/1/out.mp3"
 
-    show Igor norm with dissolve
+    show Igor think with dissolve
 
     Igor "Сколько я спал?"
     Igor "Чем я занимался вчера?"
@@ -22,7 +22,7 @@ label start:
 
     Narrator "Игорь открыл чемодан, в нём лежала огромная сумма денег."
 
-    scene room_day with fade
+    scene suitcase with fade
 
     Mind "Я еще сплю?{w} Откуда это?{w} У кого я мог украсть такую сумму денег? Но я всю жизнь был честным..."
 
@@ -100,10 +100,13 @@ label scene_2:
     show Boss happy at right with dissolve
 
     Boss "Ха-ха-ха,{w} ну вот и отлично, вижу ты хорошо выполняешь свою работу, еще немного и получишь премию."
-    
+
     hide Boss
 
+    show Vova angry
     Mind "Не дождёшься, урод!{w} С сегодняшнего дня я начинаю стартап умных чехлов!{w} Вы все увидите мою мощь!"
+
+    show Vova norm
     Mind "Только... {w}где найти деньги?"
 
     hide Vova
@@ -149,7 +152,7 @@ label scene_4:
     Masha "Ну что, как прошли ваши будние дни?"
 
     show Vova norm reverse at right with dissolve
-    Vova "Да-а, как всегда.{w} Босс орёт, постоянно тресет с меня эти долбанные отчеты..."
+    Vova "Да-а, как всегда.{w} Босс орёт, постоянно трясет с меня эти долбанные отчеты..."
     Vova "А, знаете{w}, я еще в студенчестве думал о создании собственного стартапа."
     Vova "Мы же всегда хотели это сделать, Игорь.{w} Помнишь, как мы мечтали стать богатыми?"
     Vova "Каждый день, просыпаясь с утра в своей комнате в общаге..."
@@ -177,7 +180,7 @@ label scene_4:
     Masha "Не знаю!{w} Ей нужны деньги на операцию, а у меня...{w} у меня..."
 
     hide Igor
-    show Vova norm at left with dissolve
+    show Vova angry at left with dissolve
 
     Vova "Ну успокойся, что ты так реагируешь?!"
 
@@ -260,7 +263,7 @@ label scene_4:
             hide Igor
 
             Mind "Я не знаю, правилен ли мой выбор...{w} Но, в любом случае, я его уже сделал."
-            
+
             nvl clear
             FullScreen "Вы решаете оставить деньги себе. Игорь с противоричивыми мыслями уходит"
 
@@ -300,8 +303,9 @@ label scene_5:
     show Masha norm reverse at right with dissolve
     Masha "Ну что, как прошли ваши трудовые будни?"
 
-    show Vova norm at left with dissolve
+    show Vova angry at left with dissolve
     Vova "Этот босс действует мне на нервы, но скоро это буду делать я..."
+    show Vova norm at left with dissolve
     Vova "Решил, да ну его, начну делать стартап."
     Vova "Мы же всегда хотели это сделать, братан, помнишь как мы хотели покорять вершины и быть супер богатыми."
 
@@ -317,18 +321,20 @@ label scene_5:
     hide Vova
 
     show Masha norm at left with dissolve
-
     Masha "Эх...{w} Я бы тоже хотела миллион. Моя мама лежит сейчас в больнице, одна."
     Masha "И...{w} Я не знаю, что мне делать. Мне нужны деньги."
     Igor "Эй...{w} Я думаю с ней все будет хорошо..."
+    show Masha cryed at left with dissolve
     Masha "Я не знаю!{w} Ей нужны деньги на операцию, а у меня...{w} у меня..."
 
     hide Igor
 
-    show Vova norm reverse at right with dissolve
+    show Vova angry reverse at right with dissolve
     Vova "Да сдай ты ее уже куда-нибудь, мне эти деньги для бизнеса, а тебе для какой-то чепухи."
     Igor "..."
     Vova "Не знаю, как у нее, а у меня очень важные планы."
+
+    show Masha norm at left with dissolve
     Masha "Ну что мы все о себе."
     Masha "Игорь, как у тебя дела с девушкой?"
 
@@ -357,7 +363,7 @@ label scene_5:
 
     show Igor norm reverse at right with dissolve
     Igor "В сторону центра. Сегодня я на метро"
-    Vova "Мне туда же, пока Маша"
+    Vova "Мне туда же,{w} пока Маша"
 
     hide Igor
 
@@ -376,6 +382,7 @@ label scene_5:
     menu:
         "но я могу отдать его тебе..."
         "Взять деньги":
+            show Vova happy at left with dissolve
             Vova "Конечно брат!{w} Мы так долго об этом мечтали"
             Vova "Завтра же начнём работу на проектом!"
 
@@ -392,7 +399,7 @@ label scene_6:
 
     play music "<loop 0.1>sound/3/out.mp3"
 
-    show Masha norm at left with dissolve
+    show Masha happy at left with dissolve
     Masha "Ну что, парни, как ваши дела? Есть что-нибудь новенькое?"
 
     show Vova norm reverse at right with dissolve
@@ -401,6 +408,7 @@ label scene_6:
 
     hide Vova
 
+    show Masha Norm at left with dissolve
     show Igor norm reverse at right with dissolve
     Igor "Эх..."
     Masha "Эх...{w} Я бы тоже хотела миллион."
@@ -421,8 +429,9 @@ label scene_6:
 
     hide Vova
 
-    show Masha norm at left with dissolve
+    show Masha cryed at left with dissolve
     Masha "Я не знаю, мне очень плохо в последние дни, но думаю я как-нибудь справлюсь."
+    show Masha norm at left with dissolve
     Masha "Игорь, как у тебя дела с девушкой?"
     Igor "Никак, она меня динамит."
     Igor "Она сказала, что я нищеброд и работаю в маке."
@@ -459,7 +468,7 @@ label scene_6:
 
     hide Vova
 
-    show Igor norm reverse at right with dissolve
+    show Igor think reverse at right with dissolve
     Igor "Мне действительно жаль твою маму, и я хочу тебе помочь..."
     Igor "И я могу пожертвовать этот миллион ей на лечение"
     Masha "Я не могу, это же..."
@@ -468,6 +477,7 @@ label scene_6:
     menu:
         "Игорь предлагает тебе деньги."
         "Взять деньги":
+            show Masha happy at left with dissolve
             Masha "Спасибо тебе большое, ты мой герой!"
 
             jump scene_13
@@ -482,19 +492,22 @@ label scene_7:
 
     play music "<loop 0.1>sound/6/out.mp3"
 
-    show Vova norm at left with dissolve
+    show Vova angry at left with dissolve
 
-    Vova "Опять он идёт сюда...{w} Что ему от меня надо?.."
+    Mind "Опять он идёт сюда...{w} Что ему от меня надо?.."
 
     show Boss norm at right with dissolve
 
     Boss "Ну что, ватокат, как работа продвигается?"
+    show Vova norm at left with dissolve
     Vova "..."
+    show Boss happy at right with dissolve
     Boss "Слушай, я вчера задержался немного, посмотрел твои наметки на столе, мне понравилась твоя идея с чехлами."
     Vova "Это здорово, а к чему это?"
     Boss "Наша компания решила запустить эту линию, а тебе дать надбавку в виде премии."
-    Boss "Ты проделал большую работу"
+    Boss "Ты проделал большую работу."
     Vova "Но...{w} Но, это же моя работа."
+    show Boss norm at right with dissolve
     Boss "А нас...{w} нас это не волнует."
 
     hide Boss
@@ -508,30 +521,35 @@ label scene_8:
 
     play music "<loop 0.1>sound/6/out.mp3"
 
-    show Vova norm at left with dissolve
+    show Vova angry at left with dissolve
 
-    Vova "Опять он идёт сюда...{w} Что ему от меня надо?.."
+    Mind "Опять он идёт сюда...{w} Что ему от меня надо?.."
 
     show Boss norm at right with dissolve
 
     Boss "Владимир, как идет работа?"
+    show Vova norm at left with dissolve
     Vova "..."
     Boss "Слушай, я вчера задержался немного, посмотрел твои записи на своем столе.{w} Я оценил идею с чехлами."
     Vova "Хм...{w} Спасибо!{w} Но Вы это к чему?"
+    show Boss happy at right with dissolve
     Boss "Наша компания решила запустить эту линию, а тебе дать надбавку в виде премии."
     Boss "Ты проделал большую работу"
     Vova "Но...{w} Но, это же моя работа."
+    show Boss norm at right with dissolve
     Boss "А нам...{w} Наплевать."
 
+
+    show Vova angry at left with dissolve
     Mind "Урод...{w} Неужели он всерьез думает, что сможет в кой то веке сделать что-то лучше меня?"
     Mind "Да я сделаю в 100 раз больше и лучше!"
+    show Boss happy at right with dissolve
     Boss "И да, кстати, твои идеи принесли нам огромный оборот, в следующем квартале планируется достигнуть оборота в полмиллиарда рублей."
 
     hide Boss
+    hide Vova
 
     Mind "Сколько я спал?"
-
-    hide Vova
 
     jump scene_14
 
@@ -542,15 +560,16 @@ label scene_9:
     play music "<loop 0.1>sound/5/out.mp3"
 
     show Igor norm at left with dissolve
-    show Girlfriend norm at right with dissolve
-
-
     Igor "Как приятно пригласить тебя в этот вечер"
+
+    show Girlfriend angry at right with dissolve
     Girlfriend "Ну давай без этой ванили, ты мне хотел что-то рассказать"
     Igor "..."
     Igor "Мы с моим другом открываем стартап"
     Girlfriend "И что вы делать собираетесь?"
     Igor "Огромный проект, умные чехлы для телефона, я уверен он выстрелит"
+
+    show Girlfriend norm at right with dissolve
     Girlfriend "Понятненько, но я все равно в этом ничего не понимаю, мне важен результат."
     Igor "Я сделаю это, и ты увидишь, как мы ездим по дорогим отелям, и едим вкуснейшую еду."
     Girlfriend "Ну ну..."
@@ -569,19 +588,23 @@ label scene_10:
     play music "<loop 0.1>sound/5/out.mp3"
 
     show Igor norm at left with dissolve
-    show Girlfriend norm at right with dissolve
 
     Igor "Как приятно снова встретиться с тобой.{w} Мы так давно не виделись"
+
+    show Girlfriend angry at right with dissolve
     Girlfriend "Игорь, прошу тебя!{w} Давай без этой занудной романтики.{w} Ты хотел мне что-то рассказать?"
     Igor "..."
     Igor "Я сделал доброе дело.{w} Сегодня я спас жизнь..."
+    show Girlfriend norm at right with dissolve
     Girlfriend "Как?"
     Igor "У моей подруги была трудная ситуация. Ее мама была в больнице, и ей срочно нужна была операция."
     Igor "Я оплатил её, и я так рад что я спас ей жизнь. Ничто в жизни так не важно, как делать добрые дела."
     Girlfriend "Понятненько, но я все равно в этом ничего не понимаю, мне важен результат."
+    show Girlfriend angry at right with dissolve
     Girlfriend "Тем более ты сам еще ничего не добился в этой жизни."
     Igor "Но я же хотел помочь ей."
     Girlfriend "Но, ты сам то чего добился?"
+    show Girlfriend norm at right with dissolve
     Girlfriend "Ха-ха"
     Igor "Не знаю..."
 
@@ -597,28 +620,31 @@ label scene_11:
 
     play music "<loop 0.1>sound/5/out.mp3"
 
-    show Girlfriend norm at right with dissolve
-
     show Igor norm at left with dissolve
 
+
     Igor "Как приятно пригласить тебя в этот вечер"
+
+    show Girlfriend angry at right with dissolve
     Girlfriend "Ну давай без этой ванили, ты мне хотел что-то рассказать"
     Igor "..."
     Igor "А хочешь я завтра увезу тебя в кругосветное путешествие?"
     Girlfriend "И в какое же?"
     Igor "Мы можем объехать всю Европу, побывать в Америке в дорогих отелях."
     Igor "На лучших пляжах, есть вкусную еду."
-
+    show Girlfriend norm at right with dissolve
     Girlfriend "Я не против, только я хочу еще личную машину, чтобы мы могли ездить из города в город."
     Girlfriend "Хочу нашу личную яхту, там мы пригласим гостей и сделаем большую вечеринку, чтобы все офигели."
     Girlfriend "А еще я хочу.."
 
     Igor "Я не смогу сейчас это сделать..."
+    show Girlfriend angry at right with dissolve
     Girlfriend "Почему? А я хочу! Сделай это! Игорь, мы же любим друг друга, тебе жалко ради меня?"
     Igor "Мне нужно идти"
 
     hide Igor
 
+    show Girlfriend norm at right with dissolve
     Girlfriend "Постой Игорь, почему ты уходишь? А кто же будет платить! Тебе не стыдно, так оставлять девушку?"
     Girlfriend "Кабель..."
 
@@ -632,7 +658,7 @@ label scene_12:
 
     play music "<loop 0.1>sound/4/out.mp3"
 
-    show Masha norm at left with dissolve
+    show Masha cryed at left with dissolve
 
     Masha "Доктор, я не смогла найти деньги, я беспомощна, я ненавижу себя, я..."
 
@@ -640,16 +666,17 @@ label scene_12:
 
     Doctor "Постойте, нам не нужны ваши деньги, местный фонд заинтересовался вашей матерью и оплатил полную сумму."
     Doctor "С ней все будет хорошо!"
+
+    show Masha happy at left with dissolve
     Masha "Боже, это какое-то чудо! Мама!"
     Doctor "Ей нужен покой приходите через неделю."
     Masha "Спасибо доктор!"
     Doctor "До свидания"
 
     hide Doctor
+    hide Masha
 
     Mind "Я не знаю почему я не испытала такую бурную радость от этих слов"
-
-    hide Masha
 
     jump scene_15
 
@@ -658,7 +685,7 @@ label scene_13:
     scene hospital with fade
     play music "<loop 0.1>sound/4/out.mp3"
 
-    show Masha norm at left with dissolve
+    show Masha happy at left with dissolve
 
     Masha "Доктор, как она? Я принесла деньги, вот они!"
 
@@ -673,11 +700,10 @@ label scene_13:
     Doctor "Этот вопрос уже к вам. До свидания"
 
     hide Doctor
+    hide Masha
 
     Mind "Зачем я взяла эти деньги? Дура, надо было отдать им на проект!"
     Mind "Они мои друзья, а теперь...Теперь у них ничего не получится! Нужно скорее вернуть им эти деньги."
-
-    hide Masha
 
     jump scene_16
 

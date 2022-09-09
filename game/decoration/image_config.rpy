@@ -1,7 +1,7 @@
 # Фоновые изображения
 image room_evening = im.Scale("room_evening.png", 1920, 1080)
 image room_day = im.Scale("room_day.png", 1920, 1080)
-#image suitcase = im.Scale("suitcase.png", 1920, 1080)#изменить!!!!!!!!!!!!!!!
+image suitcase = im.Scale("suitcase.png", 1920, 1080)
 image restaurant = im.Scale("restaurant.png", 1920, 1080)
 image office_evening = im.Scale("office_evening.png", 1920, 1080)
 image hospital = im.Scale("hospital.png", 1920, 1080)
@@ -19,9 +19,12 @@ transform right:
 
 image Vova norm = "characters/Vova/Vova_Norm.png"
 image Vova norm reverse = "characters/Vova/Vova_Norm_R.png"
+image Vova angry = "characters/Vova/Vova_Angry.png"
+image Vova happy = "characters/Vova/Vova_Happy.png"
 
 image Igor norm = "characters/Igor/Igor_Norm.png"
 image Igor norm reverse = "characters/Igor/Igor_Norm_R.png"
+image Igor think = "characters/Igor/Igor_Think.png"
 
 image Masha norm = "characters/Masha/Masha_Norm.png"
 image Masha norm reverse = "characters/Masha/Masha_Norm_R.png"
