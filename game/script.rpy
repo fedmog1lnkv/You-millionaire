@@ -6,6 +6,8 @@
 label start:
     scene room_day with open_eyes
 
+    play music "<loop 0.1>sound/1/out.mp3"
+
     show Igor norm with dissolve
 
     Igor "Сколько я спал?"
@@ -81,6 +83,8 @@ label person_menu:
 label scene_2:
     scene office_evening with fade
 
+    play music "<loop 0.1>sound/6/out.mp3"
+
     Mind "Боже, как я устал...{w} Еще 10 минут, и я оторвусь по полной."
 
     show Boss norm at right with dissolve
@@ -108,6 +112,8 @@ label scene_2:
 # Выбор Маши
 label scene_3:
     scene black
+
+    play music "<loop 0.1>sound/4/out.mp3"
 
     Narrator "Маша сидит и ждёт результата врачей. Напряженность в воздухе означает что-то неладное."
 
@@ -142,6 +148,8 @@ label scene_3:
 # Клуб
 label scene_4:
     scene club with fade
+
+    play music "<loop 0.1>sound/3/out.mp3"
 
     show Masha norm at left with dissolve
     Masha "Ну что как прошли ваши будние дни?"
@@ -213,6 +221,8 @@ label scene_4:
             Igor "Выйдем на улицу, что-то мне не хорошо..."
 
             scene entry_club with fade
+
+            play music "<loop 0.1>sound/7/out.mp3"
 
             show Vova norm at left with dissolve
             Vova "Игорь, тебе в какую сторону?"
@@ -291,6 +301,8 @@ label scene_4:
 label scene_5:
     scene club with fade
 
+    play music "<loop 0.1>sound/3/out.mp3"
+
     show Masha norm reverse at right with dissolve
     Masha "Ну что, как прошли ваши трудовые будни?"
 
@@ -347,6 +359,8 @@ label scene_5:
 
     scene entry_club with fade
 
+    play music "<loop 0.1>sound/7/out.mp3"
+
     show Vova norm at left with dissolve
     Vova "Тебе в какую сторону?"
 
@@ -384,6 +398,8 @@ label scene_5:
 
 label scene_6:
     scene club with fade
+
+    play music "<loop 0.1>sound/3/out.mp3"
 
     show Masha norm at left with dissolve
     Masha "Ну что, парни, как ваши дела? Есть что-нибудь новенькое?"
@@ -434,6 +450,8 @@ label scene_6:
 
     scene entry_club with fade
 
+    play music "<loop 0.1>sound/7/out.mp3"
+
     show Masha norm at left with dissolve
     Masha "Тебе в какую сторону?"
 
@@ -470,6 +488,9 @@ label scene_6:
 
 label scene_7:
     scene office_evening with fade
+
+    play music "<loop 0.1>sound/6/out.mp3"
+
     show Vova norm at left with dissolve
 
     Vova "Опять он идёт сюда...{w} Что ему от меня надо?.."
@@ -493,6 +514,8 @@ label scene_7:
 
 label scene_8:
     scene office_evening with fade
+
+    play music "<loop 0.1>sound/6/out.mp3"
 
     show Vova norm at left with dissolve
 
@@ -525,6 +548,8 @@ label scene_8:
 label scene_9:
     scene restaurant with fade
 
+    play music "<loop 0.1>sound/5/out.mp3"
+
     show Igor norm at left with dissolve
     show Girlfriend norm at right with dissolve
 
@@ -549,6 +574,8 @@ label scene_9:
 
 label scene_10:
     scene restaurant with fade
+
+    play music "<loop 0.1>sound/5/out.mp3"
 
     show Igor norm at left with dissolve
     show Girlfriend norm at right with dissolve
@@ -576,6 +603,8 @@ label scene_10:
 
 label scene_11:
     scene restaurant with fade
+
+    play music "<loop 0.1>sound/5/out.mp3"
 
     show Girlfriend norm at right with dissolve
 
@@ -610,6 +639,8 @@ label scene_11:
 label scene_12:
     scene hospital with fade
 
+    play music "<loop 0.1>sound/4/out.mp3"
+
     show Masha norm at left with dissolve
 
     Masha "Доктор, я не смогла найти деньги, я беспомощна, я ненавижу себя, я..."
@@ -634,6 +665,8 @@ label scene_12:
 
 label scene_13:
     scene hospital with fade
+
+    play music "<loop 0.1>sound/4/out.mp3"
 
     show Masha norm at left with dissolve
 
@@ -663,6 +696,8 @@ label scene_13:
 label scene_14:
     scene club with fade
 
+    play music "<loop 0.1>sound/2/out.mp3"
+
     show Igor norm at left with dissolve
     show Masha norm at center with dissolve
     show Vova norm at right with dissolve
@@ -687,6 +722,8 @@ label scene_14:
 label scene_15:
     scene club with fade
 
+    play music "<loop 0.1>sound/2/out.mp3"
+
     show Igor norm at left with dissolve
     show Masha norm at center with dissolve
     show Vova norm at right with dissolve
@@ -707,6 +744,8 @@ label scene_15:
 
 label scene_16:
     scene club with fade
+
+    play music "<loop 0.1>sound/2/out.mp3"
 
     show Igor norm at left with dissolve
     show Masha norm at center with dissolve
@@ -729,6 +768,8 @@ label scene_16:
 
 label scene_17:
     scene room_evening with fade
+
+    play music "<loop 0.1>sound/2/out.mp3"
 
     show Igor norm with dissolve
 
