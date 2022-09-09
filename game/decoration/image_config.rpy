@@ -29,3 +29,6 @@ image Boss norm = "characters/Boss/Boss_Norm.png"
 image Boss happy = "characters/Boss/Boss_Happy.png"
 
 image Doctor norm = "characters/Doctor/Doctor_Norm.png"
+
+image Girlfriend norm = "characters/Girlfriend/Girlfriend_Norm.png"
+image Girlfriend angry = "characters/Girlfriend/Girlfriend_Angry.png"
