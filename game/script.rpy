@@ -408,7 +408,7 @@ label scene_6:
 
     hide Vova
 
-    show Masha Norm at left with dissolve
+    show Masha norm at left with dissolve
     show Igor norm reverse at right with dissolve
     Igor "Эх..."
     Masha "Эх...{w} Я бы тоже хотела миллион."
@@ -713,21 +713,33 @@ label scene_14:
     play music "<loop 0.1>sound/2/out.mp3"
 
     show Igor norm at left with dissolve
-    show Masha norm at center with dissolve
     show Vova norm reverse at right with dissolve
 
     Igor "Вован!{w} Ну что, как там с проектом? Мы должны подняться!"
     Igor "Я был сегодня с девушкой на свидании и..."
     Vova "Нету у нас больше проекта...{w} Забирай деньги."
     Igor "ЧТО?!"
+
+    hide Igor
+    show Masha norm at left with dissolve
     Masha "Что случилось?"
     Vova "Босс спалил все наши планы и сам запустил эту линейку..."
+    hide Masha
+
+    show Igor think at left with dissolve
     Igor "..."
     Igor "Я не знаю, что даже сказать...{w} Значит не получится осуществить наш стартап, который мы так хотели сделать?"
     Vova "Получается, что так."
+
+    hide Vova
+
+    show Masha norm reverse at right with dissolve
     Masha "Не расстраивайся!{w} Значит так нужно было, в любом случае все будет хорошо!"
     Masha "Кстати... {w} Моя мама идет на поправку!"
     Igor "Правда?{w} Я рад этому..."
+    hide Masha
+
+    show Vova happy reverse at right with dissolve
     Vova "Ага{w} и я..."
 
     jump scene_17
@@ -739,7 +751,7 @@ label scene_15:
     play music "<loop 0.1>sound/2/out.mp3"
 
     show Igor norm at left with dissolve
-    show Masha norm at center with dissolve
+
     show Vova norm reverse at right with dissolve
 
     Vova "Ну что, Игорь, как свидание?"
@@ -747,9 +759,15 @@ label scene_15:
     Vova "Ха-ха, ну я сразу видел в ней это"
     Igor "Ага..."
     Mind "Как же мне стыдно и неловко, что я не отдал им эти деньги..."
+
+    hide Vova
+    show Masha norm reverse at right with dissolve
     Masha "Ну ладно, и такое бывает."
+    hide Masha
     Igor "Ладно, я пойду, еще дел куча, пожалуй надо выспаться."
+    hide Igor
     Mind "Какой позор...{w} Опять..."
+
     Vova "Давай."
     Masha "Пока."
 
@@ -760,19 +778,31 @@ label scene_16:
     scene club with fade
     play music "<loop 0.1>sound/2/out.mp3"
 
-    show Igor norm at left with dissolve
-    show Masha norm at center with dissolve
-    show Vova norm reverse at right with dissolve
+    show Masha norm at left with dissolve
 
     Masha "Парни, простите меня!{w} Я взяла деньги и не подумала о вас, мне так стыдно."
+
+    show Vova norm reverse at right with dissolve
     Vova "Какие деньги?"
+
+    hide Vova
+    show Igor norm reverse at right with dissolve
     Igor "Неважно, главное, что с мамой все хорошо!"
     Masha "С ней и так все хорошо, я верну деньги тебе Игорь, для вашего проекта, спасибо, что помог."
+
+    hide Masha
+    show Vova angry at left with dissolve
     Vova "Игорь?{w} Они у тебя были?"
     Igor "..."
     Igor "Я хотел помочь ей!"
     Vova "Ясно друг, я пошёл, всего хорошего."
+
+    hide Vova
+    show Masha norm at left with dissolve
     Masha "Не расстраивайся значит так нужно было, в любом случае все хорошо"
+    show Igor think reverse at right with dissolve
+    hide Masha
+    show Vova angry at left with dissolve
     Igor "Да Вова, ты чего?"
     Vova "Ни-че-го,{w} чао."
 
@@ -784,7 +814,7 @@ label scene_17:
 
     play music "<loop 0.1>sound/2/out.mp3"
 
-    show Igor norm with dissolve
+    show Igor think with dissolve
 
     Igor "Я не знаю, что я опять сделал не так..."
     Igor "ЧТО Я ОПЯТЬ СДЕЛАЛ НЕ ТАК?!"
